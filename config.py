@@ -14,12 +14,13 @@ import pytorch_lightning as pl
 class Config:
     # User Setting
     SEED = 94
-    DATASET_DIR = join(dirname(dirname(abspath(__file__))), 'data')  # ~/stock.estimation/data
-    SENTENCE_DATASET_DIR = join(DATASET_DIR, '')
+    DATASET_DIR = ('./data')  
 
+    model_type = 'sbert' # 'sbart', 'sbert', 'st5'
+    
     num_gpus = 1
-    max_epochs = 1000
-    batch_size = 1
+    max_epochs = 10
+    batch_size = 4 
      
     criterion = 'RMSE'
     optimizer = 'AdamW'
