@@ -62,7 +62,7 @@ model = CustomModule(
     learning_rate=cfg.learning_rate,
     criterion_name=cfg.criterion,
     optimizer_name=cfg.optimizer,
-    is_finetune=True,
+    model_type = cfg.model_type,
 )
 
 print('Start model fitting')
